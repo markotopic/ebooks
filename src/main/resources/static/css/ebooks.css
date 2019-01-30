@@ -1,0 +1,96 @@
+
+body {
+  height: 100vh;
+  background-color: #E7DFDD;
+}
+
+#logout {
+	margin-right: 0.5%;
+}
+
+#main{
+	height: 100vh;
+}
+
+#tabela {
+	margin-top: 5%;
+}
+
+.navbar {
+  color: white;
+}
+
+footer {
+    background: #f8f8f8;
+    color: #9d9d9d;
+    margin: none;
+    /*width: 100%;*/
+    text-align: center;
+    padding: 0.5em;
+}
+
+
+
+/*Tabela*/
+.panel-table .panel-body{
+  padding:0;
+}
+
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align:center;
+    width: 100px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+  border-right: 0px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+  border-left: 0px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+  border-bottom: 0px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+  border-top: 0px;
+}
+
+.panel-table .panel-footer .pagination{
+  margin:0; 
+}
+
+/*
+used to vertically center elements, may need modification if you're not using default sizes.
+*/
+.panel-table .panel-footer .col{
+ line-height: 34px;
+ height: 34px;
+}
+
+.panel-table .panel-heading .col h3{
+ line-height: 30px;
+ height: 30px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr > td{
+  line-height: 34px;
+}
+
+#btnAdd {
+    color: white;
+    background: #5cb85c;
+}
+
+#btnEdit {
+    color: white;
+    background: #5cb85c;
+}
