@@ -53,7 +53,7 @@ function uploadData() {
             console.log("SUCCESS : ", data);
             $("#btnSubmit").prop("disabled", false);
             $("#alert").append('<div class="alert alert-success">'
-                                  + '<strong>Success!</strong>File has been successfully uploaded.'
+                                  + '<strong>Success!</strong> File has been successfully uploaded.'
                                   + '</div>');
 
         },
@@ -129,6 +129,7 @@ function searchLuceneTermQuery() {
                   $('#result').append('<li>' + key + ': ' + value + '</li>');
                 });
             }
+            myFunction1();
             console.log("SUCCESS : ", data);
             $("#btnSubmitLuceneTermQuery").prop("disabled", false);
 
@@ -146,6 +147,15 @@ function searchLuceneTermQuery() {
 
 function myFunction() {
   var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+//    x.style.display = "none";
+  }
+}
+
+function myFunction1() {
+  var x = document.getElementById("resultDiv");
   if (x.style.display === "none") {
     x.style.display = "block";
   } else {

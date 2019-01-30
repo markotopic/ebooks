@@ -11,7 +11,8 @@
 	<link rel="stylesheet" type="text/css" href="css/ebooks.css">
 	<script src="js/script.js"></script>
     <script type="text/javascript" src="js/loadEbooks.js"></script>
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="js/loadSelect.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="containet-fluid" id="main">
@@ -60,7 +61,9 @@
                         <th><em class="fa fa-cog"></em></th>
                         <th class="hidden-xs">Title</th>
                         <th>Author</th>
+                        <th>Keywords</th>
                         <th>Category</th>
+                        <th>Language</th>
                     </tr> 
                   </thead>
                   <tbody id="dataTable">
@@ -128,6 +131,10 @@
                             <div class="form-group">
                                 <label>Edit Author</label>
                                 <input id="author" type="text" class="form-control" name="author" placeholder="Author" required="">
+                            </div>
+                            <div class="form-group">
+                                <label>Edit Keywords</label>
+                                <input id="keywords" type="text" class="form-control" name="keywords" placeholder="Keywords" required="">
                             </div>
                             <div class="form-group">
                                 <label>Select a Category</label>
