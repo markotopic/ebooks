@@ -53,6 +53,9 @@ public class UmodelController {
         }
     }
 
+    Long catId;
+    Long langId;
+
     @PutMapping(value="/update/{id}")
     public ResponseEntity<String> updateUser(@ModelAttribute UploadModel bookDTO, @PathVariable("id") Long id){
         UModel book = umodelService.findOne(id);
@@ -77,8 +80,7 @@ public class UmodelController {
         return new ResponseEntity<String>(new UploadModel(book).toString(), HttpStatus.OK);
     }
 
-    Long catId;
-    Long langId;
+
 
     public Long getCatId() {
         return catId;

@@ -6,4 +6,7 @@ import rs.ac.uns.ftn.informatika.udd.vezbe01.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
+
+    User findByUsername(String username);
+
 }

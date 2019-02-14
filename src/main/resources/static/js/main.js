@@ -27,6 +27,15 @@ $(document).ready(function () {
 
     });
 
+    $("#btnLogout").click(function (event) {
+
+        //stop submit the form, we will post it manually.
+        event.preventDefault();
+
+        window.location.replace("index.html");
+
+    });
+
 });
 
 function uploadData() {
@@ -112,7 +121,9 @@ function searchLuceneTermQuery() {
     var value = $('#luceneTermQuery input[name=value]').val();
 
     var data = JSON.stringify({"field":field1, "value":value});
-   
+
+    var y = "";
+
     $("#btnSubmitLuceneTermQuery").prop("disabled", true);
 
     $.ajax({
@@ -127,7 +138,18 @@ function searchLuceneTermQuery() {
                 var result = data[index]
                 $.each(result, function(key, value) {
                   $('#result').append('<li>' + key + ': ' + value + '</li>');
+
+                  if(key == "location"){
+                    y = value;
+//                    y = "target/classes/files/ProjekatOSA2018.pdf";
+//                    $("#dwnLoad").prop("href", link);
+//                    $("#dwnLoad").attr("href", link);
+
+                    console.log("***DOWNLOAD: ", y);
+                  }
                 });
+                $('#result').append('<li>' + '<a id="dwnLoad" href="' + y + '" download >' + "Download link" + '</a>' + '</li>');
+
             }
             myFunction1();
             console.log("SUCCESS : ", data);

@@ -73,4 +73,15 @@ public class UserController {
         }
     }
 
+    @GetMapping(value="/login/{username}/{password}")
+    public ResponseEntity<UserDTO> login(@PathVariable("username") String username, @PathVariable("password") String password){
+        User user = userService.findByUsernameAndPassword(username, password);
+        if(user != null) {
+            return new ResponseEntity<UserDTO>(new UserDTO(user), HttpStatus.OK);
+
+        }
+
+        return new ResponseEntity<UserDTO>(HttpStatus.NOT_FOUND);
+    }
+
 }

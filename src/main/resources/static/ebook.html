@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ebooks</title>
+    <link rel="shortcut icon" type="image/png" href="slike/elogo2.png">
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/ebooks.css">
+    <script src="js/script.js"></script>
+    <script type="text/javascript" src="js/loadEbook.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="containet-fluid" id="main">
+
+    <nav class="navbar navbar-default">
+        <div class="containet-fluid">
+
+            <div class="navbar-header">
+                <a href="#" class="navbar-left" id="navLogo"><img src="slike/elogo1.png"></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Available Books</a></li>
+                <li><a href="index.html">Search</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="logout">
+                <li><a data-toggle="modal" data-target="#loginModal" href="#">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- body -->
+
+    <div class="container" id="tabela">
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+
+                <div class="panel panel-default panel-table">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col col-xs-6">
+                                <h3 class="panel-title">Available Books</h3>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table table-striped table-bordered table-list">
+                            <thead>
+                            <tr>
+                                <th hidden=""><em class="fa fa-cog"></em></th>
+                                <th class="hidden-xs">Title</th>
+                                <th>Author</th>
+                                <th>Keywords</th>
+                                <th>Category</th>
+                                <th>Language</th>
+                            </tr>
+                            </thead>
+                            <tbody id="dataTable">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <div class="row">
+                            <div class="col col-xs-4">Page 1 of 1
+                            </div>
+                            <div class="col col-xs-8">
+                                <ul class="pagination hidden-xs pull-right">
+                                    <li><a href="#">1</a></li>
+                                </ul>
+                                <ul class="pagination visible-xs pull-right">
+                                    <li><a href="#">«</a></li>
+                                    <li><a href="#">»</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- LOGIN -->
+    <div class="modal fade" id="loginModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4><span class="glyphicon glyphicon-lock"></span> Log in</h4>
+                </div>
+                <div class="modal-body">
+                    <form method="GET">
+                        <!-- <form> -->
+                        <div class="form-group">
+                            <label for="uname"><span class="glyphicon glyphicon-user"></span> Enter username</label>
+                            <input type="text" class="form-control" id="uname" placeholder="Username" required="">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><span class="glyphicon glyphicon-lock"></span> Enter password</label>
+                            <input type="password" class="form-control" id="pass" placeholder="Password" required="">
+                        </div>
+                        <button class="btn btn-block" type="submit" id="btnLogin">Log in
+                            <!-- <button class="btn btn-block">Log in  -->
+                            <span class="glyphicon glyphicon-log-in"></span>
+                        </button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <p>Don't Have an Account? <a href="registracija.html">Click Here!</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- LOGIN -->
+
+    <!-- ***Tabela*** -->
+</div>
+<footer class="container-fluid">
+    Copyright &copy; 2018 A Web Design Company
+</footer>
+</body>
+</html>

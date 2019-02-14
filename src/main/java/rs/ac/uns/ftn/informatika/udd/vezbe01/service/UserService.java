@@ -33,5 +33,23 @@ public class UserService implements UserServiceInterface {
         userRepository.deleteById(id);
     }
 
+    @Override
+    public User findByUsernameAndPassword(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if(user.getUsername().equals(username) && user.getPassword().equals(password))
+            return user;
+        else
+            return null;
+    }
+
+    @Override
+    public User findByUsername(String username) {
+        User user = userRepository.findByUsername(username);
+        if(user.getUsername().equals(username))
+            return user;
+        else
+            return null;
+    }
+
 
 }

@@ -39,13 +39,13 @@ $(document).ready(
                     var col3 = currentRow.find("td:eq(2)").text();
                     var col4 = currentRow.find("td:eq(3)").text();
                     var col5 = currentRow.find("td:eq(4)").text();
-                    var col6 = currentRow.find("td:eq(5)").text();
+                    var col6 = currentRow.find("td:eq(5)").val();
 
                     $('#title').val(col2);
                     $('#author').val(col3);
-                    $('#keywords').val(col5);
+                    $('#keywords').val(col4);
 
-                    $('#opcije').val(col5);
+                    $('#opcije').text(col5);
                     $('#opcije1').val(col6);
 
                     $('#bookEditModal').modal('toggle');
@@ -55,6 +55,15 @@ $(document).ready(
 
 
                         });
+
+                $("#btnLogout").click(function (event) {
+
+                        //stop submit the form, we will post it manually.
+                        event.preventDefault();
+
+                        window.location.replace("index.html");
+
+                    });
 
 			});
 

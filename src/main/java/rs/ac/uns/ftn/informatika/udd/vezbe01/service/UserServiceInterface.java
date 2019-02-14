@@ -14,4 +14,8 @@ public interface UserServiceInterface {
 
     void remove(Long id);
 
+    User findByUsernameAndPassword(String Username, String password);
+
+    User findByUsername(String username);
+
 }

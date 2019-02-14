@@ -68,7 +68,6 @@ public class IndexerController {
 	    @PostMapping("/index/add")
 	    public ResponseEntity<String> multiUploadFileModel(@ModelAttribute UploadModel model) {
 
-
 	        try {
 
 	        	indexUploadedFile(model);
@@ -89,7 +88,6 @@ public class IndexerController {
             try {
 
                 indexUploadedFile1(model);
-
 
             } catch (IOException e) {
                 return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
@@ -148,7 +146,6 @@ public class IndexerController {
 	            	indexUnit.setLanguage(languageService.findOne(langId).getName());
 
 	            	Indexer.getInstance().add(indexUnit.getLuceneDocument());
-//                    saveDB(model);
 	            }
 	    	}
 	    }

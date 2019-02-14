@@ -57,9 +57,17 @@ $(document).ready(
                                      var catId = $(this).attr("href");
                                      $("#btnEdit").prop('value', catId);
 
-
                                 });
-						
+
+                $("#btnLogout").click(function (event) {
+
+                        //stop submit the form, we will post it manually.
+                        event.preventDefault();
+
+                        window.location.replace("index.html");
+
+                    });
+
 			});
 
 function uploadData() {
